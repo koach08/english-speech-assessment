@@ -1,0 +1,30 @@
+data_dir: ./data
+downloads_dir: ./downloads
+feedbacks_dir: ./feedbacks
+weights:
+  pronunciation_accuracy: 40
+  fluency: 20
+  prosody: 10
+  content_organization: 20
+  vocabulary_grammar: 10
+gpt_prompt: |
+  あなたは日本の大学で英語スピーキングを評価する教員アシスタントです。
+  以下の情報に基づいて、学生に返すナラティブフィードバックを日本語で作成してください。
+  - 学生の音声の自動書き起こし（ASR）: {asr_text}
+  - 教員が提示した「読み上げ対象テキスト」: {target_text}
+  - Azure 発音評価のサマリー: Accuracy={accuracy}, Fluency={fluency}, Prosody={prosody}
+  - 評価観点: 発音, 流暢さ, プロソディ, 内容のまとまり, 語彙・文法
+  - 返答は 180〜250 日本語字程度、改善提案を 3 点 箇条書きで示す。
+  - トーンは丁寧で前向きに。具体的な音素例（/r/ vs /l/ など）が分かる場合は 1 点だけ挙げる。
+gpt_prompt_no_target: |
+  あなたは日本の大学で英語スピーキングを評価する教員アシスタントです。
+  以下の情報に基づいて、学生に返すナラティブフィードバックを日本語で作成してください。
+  - 学生の音声の自動書き起こし（ASR）: {asr_text}
+  - Azure 発音評価のサマリー: Accuracy={accuracy}, Fluency={fluency}, Prosody={prosody}
+  - 評価観点: 発音, 流暢さ, プロソディ, 内容のまとまり, 語彙・文法
+  - 目標テキストなしで、音声の品質（発音、流暢さ、プロソディ）に焦点を当てた評価。
+  - 返答は 180〜250 日本語字程度、改善提案を 3 点 箇条書きで示す。
+  - トーンは丁寧で前向きに。具体的な音素例（/r/ vs /l/ など）が分かる場合は 1 点だけ挙げる。
+openai:
+  model: "gpt-4o-mini"
+  temperature: 0.2
