@@ -1,6 +1,6 @@
 # English Speech Assessment Tool
 
-A tool designed for educators to evaluate English pronunciation and speaking skills. It leverages Azure Speech Services for pronunciation assessment (Accuracy, Fluency, Prosody) and OpenAI for generating detailed Japanese feedback (180-250 characters, 3 improvement suggestions). Supports YouTube/Google Drive links, MP3/MP4 files, and CSV input for batch processing. Integrates with Moodle for efficient grading. Developed with assistance from ChatGPT, Grok, Claude, Azure, and OpenAI for Hokkaido University and other educational institutions.
+A tool designed for educators to evaluate English pronunciation and speaking skills. It leverages Azure Speech Services for pronunciation assessment (Accuracy, Fluency, Prosody) and OpenAI for generating detailed Japanese feedback (180-250 characters, 3 improvement suggestions). Supports YouTube/Google Drive links, MP3/MP4 files, and CSV input for batch processing. Integrates with Moodle for efficient grading. Developed with assistance from ChatGPT, Grok, Claude, Azure, and OpenAI for university classrooms.
 
 ## Features
 - **Input Options**: YouTube (limited sharing), Google Drive links, MP3/MP4 files, CSV (batch processing).
